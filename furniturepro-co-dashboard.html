@@ -86,7 +86,8 @@ body {
 }
 
 .carousel-track img {
-  min-width: 100%;
+  width: 100%;
+  flex-shrink: 0;   /* 🔒 prevents collapse */
   object-fit: cover;
 }
 
@@ -218,12 +219,14 @@ let currentIndex = 0;
 
 function moveSlide(direction) {
   const track = document.getElementById("carousel");
-  const totalSlides = track.children.length;
+  const slides = track.children;
+  const totalSlides = slides.length;
 
   currentIndex += direction;
 
-  if (currentIndex < 0) currentIndex = totalSlides - 1;
-  if (currentIndex >= totalSlides) currentIndex = 0;
+  // Stop at boundaries (no glitch)
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex > totalSlides - 1) currentIndex = totalSlides - 1;
 
   track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
