@@ -78,13 +78,16 @@
     }
 
     /* ===== CARDS ===== */
-    .card {
+ .card {
   background: #161b22;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 0 1px #30363d;
-  margin-bottom: 20px
-      overflow: hidden;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+    .gallery-card {
+  height: 260px;   /* controls card size */
 }
 
     .card h2 {
@@ -99,21 +102,21 @@
     /* ===== GALLERY ===== */
 .gallery {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   overflow-x: auto;
-  overflow-y: hidden;   /* important */
+  overflow-y: hidden;
+  height: 180px;
   padding-bottom: 10px;
-  max-width: 100%;
 }
 
 .gallery img {
-  height: 120px;              /* slightly smaller */
-  max-width: 200px;           /* PREVENTS canvas stretch */
+  height: 160px;        /* BIG images */
+  width: 320px;         /* only ~2 fit */
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 10px;
   flex-shrink: 0;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 .gallery::-webkit-scrollbar {
   height: 6px;
@@ -121,6 +124,9 @@
 
 .gallery::-webkit-scrollbar-thumb {
   background: #30363d;
+}
+    .gallery img:hover {
+  transform: scale(1.03);
 }
 
   </style>
@@ -213,16 +219,16 @@
       <p>Business-focused analytical reporting.</p>
     </div>
 
-  <div class="card">
-    <h2>Gallery</h2>
+<div class="card gallery-card">
+  <h2>Gallery</h2>
 
-    <div class="gallery">
-      <img src="images/images/dashboard1.png" alt="Dashboard 1">
-      <img src="images/images/dashboard2.png" alt="Dashboard 2">
-      <img src="images/images/dashboard3.png" alt="Dashboard 3">
-      <img src="images/images/dashboard4.png" alt="Dashboard 4">
-    </div>
+  <div class="gallery">
+    <img src="images/images/dashboard1.png">
+    <img src="images/images/dashboard2.png">
+    <img src="images/images/dashboard3.png">
+    <img src="images/images/dashboard4.png">
   </div>
+</div>
   </div>
 
   <!-- RIGHT COLUMN -->
