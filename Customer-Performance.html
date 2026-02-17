@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Customer Performance Dashboard | Muniba Fatima</title>
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+  overflow-x: hidden;
+}
+
+/* ===== PROFILE HEADER ===== */
+.profile-top {
+  max-width: 1400px;
+  margin: 40px auto 30px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.profile-info p {
+  margin: 6px 0 0;
+  color: #8b949e;
+}
+
+.profile-nav {
+  margin-top: 14px;
+}
+
+.profile-nav a {
+  color: #ebb559;
+  text-decoration: none;
+  margin-right: 14px;
+  font-size: 15px;
+}
+
+.profile-nav a:hover {
+  color: #bcfa7a;
+}
+
+/* ===== CONTENT ===== */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 30px 60px;
+}
+
+/* ===== DASHBOARD TITLE ===== */
+.dashboard-title {
+  font-size: 22px;
+  color: #f0f6fc;
+  margin-bottom: 14px;
+}
+
+/* ===== CAROUSEL ===== */
+.carousel-wrapper {
+  position: relative;
+  background: #161b22;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px #30363d;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+  .carousel-track {
+  display: flex;
+  width: 100%;              /* 🔑 FORCE WIDTH */
+}
+  .carousel-wrapper {
+  width: 100%;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;   /* 🔒 prevents collapse */
+  object-fit: cover;
+}
+  .slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slide img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ===== ARROWS ===== */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(22,27,34,0.9);
+  border: 1px solid #30363d;
+  color: #f0f6fc;
+  font-size: 24px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;                 /* 🔑 ALWAYS ON TOP */
+  opacity: 0.9;
+}
+
+.carousel-btn:hover {
+  background: rgba(240,246,252,0.15);
+  opacity: 1;
+}
+
+.prev {
+  left: 16px;
+}
+
+.next {
+  right: 16px;
+}
+
+
+/* ===== CARDS ===== */
+.card {
+  background: #161b22;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #30363d;
+  margin-top: 25px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #f0f6fc;
+}
+
+.card p,
+.card li {
+  color: #9da7b1;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="profile-top">
+  <img src="images/images/profile.jpg" class="profile-pic">
+
+  <div class="profile-info">
+    <h1>Muniba Fatima</h1>
+    <p>Power BI Developer | Data Analyst | Microsoft Fabric</p>
+
+    <div class="profile-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONTENT ===== -->
+<div class="container">
+
+  <!-- DASHBOARD NAME -->
+  <div class="dashboard-title">
+    Customer Performance Dashboard
+  </div>
+
+  <!-- IMAGE CAROUSEL -->
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">◀</button>
+
+    <div class="carousel-track" id="carousel">
+      <div class="slide"><img src="images/images/FP3.png"></div>
+  
+  <div class="slide"><img src="images/images/FP5.png"></div>
+  <div class="slide"><img src="images/images/FP6.png"></div>
+
+</div>
+
+    <button class="carousel-btn next" onclick="moveSlide(1)">▶</button>
+  </div>
+
+  <!-- DETAILS -->
+  <div class="card">
+    <h3>📌 Business Problem</h3>
+    <p>
+      The business required a centralized dashboard to monitor sales,
+      margins, store KPIs, and discount impact across regions.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>📊 Solution</h3>
+    <p>
+      Developed a Power BI solution with optimized data models,
+      DAX time intelligence, and drill-through analysis.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🧠 Key Insights</h3>
+    <ul>
+      <li>Identified high- and low-performing stores</li>
+      <li>Detected margin erosion due to discounting</li>
+      <li>Improved executive decision-making</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🛠 Tools Used</h3>
+    <p>Power BI · DAX · SQL · Excel</p>
+  </div>
+
+</div>
+<script>
+let currentIndex = 0;
+
+function moveSlide(direction) {
+  const track = document.getElementById("carousel");
+  const slides = track.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+
+  currentIndex = currentIndex + direction;
+
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex > totalSlides - 1) currentIndex = totalSlides - 1;
+
+  const slideWidth = slides[0].offsetWidth;
+  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+</script>
+
+
+
+
+</body>
+</html>
