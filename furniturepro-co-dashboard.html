@@ -1,72 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Retail Analytics Dashboard | Muniba Fatima</title>
+<meta charset="UTF-8">
+<title>Retail Analytics Dashboard | Muniba Fatima</title>
 
-  <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      background-color: #f7f9fc;
-      color: #333;
-    }
+<style>
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+}
 
-    header {
-      background: #ffffff;
-      padding: 20px 40px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
+/* ===== PROFILE HEADER (SAME AS INDEX) ===== */
+.profile-top {
+  max-width: 1400px;
+  margin: 40px auto 30px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: 500;
-      color: #007acc;
-    }
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px;
-    }
+.profile-info h1 {
+  margin: 0;
+  font-size: 30px;
+}
 
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin: 20px 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
+.profile-info p {
+  margin: 6px 0 0;
+  color: #8b949e;
+  font-size: 16px;
+}
 
-    .card {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      margin-bottom: 25px;
-    }
-  </style>
+.profile-nav {
+  margin-top: 14px;
+}
+
+.profile-nav a {
+  color: #ebb559;
+  text-decoration: none;
+  margin-right: 14px;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.profile-nav a:hover {
+  color: #bcfa7a;
+}
+
+/* ===== CONTENT ===== */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 30px 60px;
+}
+
+/* ===== IMAGE ===== */
+.container img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0 30px;
+  box-shadow: 0 0 0 1px #30363d;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: #161b22;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #30363d;
+  margin-bottom: 25px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #f0f6fc;
+}
+
+.card p,
+.card li {
+  color: #9da7b1;
+  line-height: 1.6;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Retail Analytics Dashboard</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-  </nav>
-</header>
+<!-- ===== SAME HEADER AS INDEX ===== -->
+<div class="profile-top">
+  <img src="images/images/profile.jpg" class="profile-pic">
 
+  <div class="profile-info">
+    <h1>Muniba Fatima</h1>
+    <p>Power BI Developer | Data Analyst | Microsoft Fabric</p>
+
+    <div class="profile-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE CONTENT ===== -->
 <div class="container">
-<img src="images/images/furniturepro-dashboard.png" alt="FurniturePro Dashboard">
 
+  <img src="images/images/furniturepro-dashboard.png" alt="Retail Analytics Dashboard">
 
   <div class="card">
     <h3>📌 Business Problem</h3>
     <p>
       The business needed a centralized dashboard to monitor sales performance,
-      margins, store KPIs and discount impact across regions.
+      margins, store KPIs, and discount impact across regions.
     </p>
   </div>
 
@@ -74,7 +130,7 @@
     <h3>📊 Solution</h3>
     <p>
       Built an interactive Power BI dashboard with time intelligence,
-      drill-through analysis, KPI tracking and store-level insights.
+      drill-through analysis, KPI tracking, and store-level insights.
     </p>
   </div>
 
@@ -82,14 +138,14 @@
     <h3>🧠 Key Insights</h3>
     <ul>
       <li>Identified high-performing and underperforming stores</li>
-      <li>Highlighted margin erosion due to excessive discounting</li>
-      <li>Improved decision-making with real-time KPIs</li>
+      <li>Highlighted margin erosion caused by excessive discounting</li>
+      <li>Enabled faster decision-making with real-time KPIs</li>
     </ul>
   </div>
 
   <div class="card">
     <h3>🛠 Tools Used</h3>
-    <p>Power BI, DAX, SQL, Excel</p>
+    <p>Power BI · DAX · SQL · Excel</p>
   </div>
 
 </div>
