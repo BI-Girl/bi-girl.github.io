@@ -87,9 +87,8 @@
   margin-bottom: 20px;
   overflow: hidden;
 }
-    .gallery-card {
+   .gallery-card {
   height: 260px;
-  max-width: 100%;
   overflow: hidden;
 }
 
@@ -108,7 +107,10 @@
   gap: 16px;
   overflow-x: auto;
   overflow-y: hidden;
-  height: 180px;
+
+  width: calc((340px * 2) + 16px); /* EXACTLY 2 images */
+  max-width: 100%;
+
   padding-bottom: 10px;
 }
 
