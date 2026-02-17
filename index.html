@@ -83,7 +83,8 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 0 1px #30363d;
-  margin-bottom: 20px;
+  margin-bottom: 20px
+      overflow: hidden;
 }
 
     .card h2 {
@@ -100,17 +101,20 @@
   display: flex;
   gap: 12px;
   overflow-x: auto;
+  overflow-y: hidden;   /* important */
   padding-bottom: 10px;
+  max-width: 100%;
 }
 
 .gallery img {
-  height: 140px;
+  height: 120px;              /* slightly smaller */
+  max-width: 200px;           /* PREVENTS canvas stretch */
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   flex-shrink: 0;
   cursor: pointer;
 }
-
 .gallery::-webkit-scrollbar {
   height: 6px;
 }
