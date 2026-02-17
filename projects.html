@@ -1,72 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects | Muniba Fatima</title>
+<meta charset="UTF-8">
+<title>Projects | Muniba Fatima</title>
 
-  <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      background-color: #f7f9fc;
-      color: #333;
-    }
+<style>
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+}
 
-    header {
-      background: #ffffff;
-      padding: 20px 40px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
+/* ===== PROFILE HEADER (SAME AS INDEX) ===== */
+.profile-top {
+  max-width: 1400px;
+  margin: 40px auto 30px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
-    header h1 { margin: 0; }
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+}
 
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: 500;
-      color: #007acc;
-    }
+.profile-info h1 {
+  margin: 0;
+  font-size: 30px;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px;
-    }
+.profile-info p {
+  margin: 6px 0 0;
+  color: #8b949e;
+  font-size: 16px;
+}
 
-    .card {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      margin-bottom: 20px;
-    }
-  </style>
+.profile-nav {
+  margin-top: 14px;
+}
+
+.profile-nav a {
+  color: #ebb559;
+  text-decoration: none;
+  margin-right: 14px;
+  font-size: 15px;
+}
+
+.profile-nav a:hover {
+  color: #bcfa7a;
+}
+
+/* ===== CONTENT ===== */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 30px 60px;
+}
+
+.card {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #30363d;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #f0f6fc;
+}
+
+.card p {
+  color: #9da7b1;
+  line-height: 1.5;
+}
+
+.card a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: #f2c94c;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Projects</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="powerbi.html">Power BI</a>
-    <a href="fabric.html">Fabric</a>
-  </nav>
-</header>
+<!-- ===== SAME HEADER AS INDEX ===== -->
+<div class="profile-top">
+  <img src="images/images/profile.jpg" class="profile-pic">
 
+  <div class="profile-info">
+    <h1>Muniba Fatima</h1>
+    <p>Power BI Developer | Data Analyst | Microsoft Fabric</p>
+
+    <div class="profile-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resources.html">Resources</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROJECTS CONTENT ===== -->
 <div class="container">
 
   <div class="card">
- <h3>
-  <a href="furniturepro-co-dashboard.html">
-    FurniturePro & Co Dashboard
-  </a>
-</h3>
-
-
+    <h3>
+      <a href="furniturepro-co-dashboard.html">
+        FurniturePro & Co Dashboard
+      </a>
+    </h3>
     <p>
-      Built an end-to-end Power BI dashboard analyzing sales trends,
-      margins, store performance, sell-through and discount impact.
+      End-to-end Power BI dashboard analyzing sales trends, margins,
+      store performance, sell-through, and discount impact.
     </p>
   </div>
 
@@ -74,7 +131,7 @@
     <h3>Stock Prediction (ML) – Relaxo</h3>
     <p>
       Machine learning solution to predict minimum and maximum stock
-      levels and identify stock-out scenarios for stores.
+      levels and identify potential stock-out scenarios at store level.
     </p>
   </div>
 
