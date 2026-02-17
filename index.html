@@ -20,14 +20,16 @@
 }
 
 .profile-nav a {
-  text-decoration: none;
   color: #58a6ff;
-  font-weight: 500;
-  padding: 0 6px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block; /* prevents layout shift */
 }
 
 .profile-nav a:hover {
-  text-decoration: underline;
+  color: #f2c94c; /* mustard */
+  transform: scale(1.04); /* ~1px visual growth */
 }
 
 .profile-nav span {
