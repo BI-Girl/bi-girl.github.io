@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gallery | Muniba Fatima</title>
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+/* ===== PROFILE HEADER (SAME AS OTHER PAGES) ===== */
+.profile-top {
+  max-width: 1400px;
+  margin: 40px auto 30px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.profile-info p {
+  margin: 6px 0 0;
+  color: #8b949e;
+}
+
+.profile-nav {
+  margin-top: 14px;
+}
+
+.profile-nav a {
+  color: #ebb559;
+  text-decoration: none;
+  margin-right: 14px;
+  font-size: 15px;
+}
+
+.profile-nav a:hover {
+  color: #bcfa7a;
+}
+
+/* ===== PAGE CONTENT ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 30px 60px;
+}
+
+.page-title {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #f0f6fc;
+}
+
+/* ===== GALLERY GRID ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ===== GALLERY CARD ===== */
+.gallery-card {
+  background: #161b22;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #30363d;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* ===== IMAGE ===== */
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ===== CARD CONTENT ===== */
+.gallery-card .content {
+  padding: 16px;
+}
+
+.gallery-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #f0f6fc;
+}
+
+.gallery-card p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #9da7b1;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="profile-top">
+  <img src="images/images/profile.jpg" class="profile-pic">
+
+  <div class="profile-info">
+    <h1>Muniba Fatima</h1>
+    <p>Power BI Developer | Data Analyst | Microsoft Fabric</p>
+
+    <div class="profile-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONTENT ===== -->
+<div class="container">
+
+  <div class="page-title">Dashboard Gallery</div>
+
+  <div class="gallery-grid">
+
+    <!-- CARD 1 -->
+    <a href="sales-performance-dashboard.html" class="gallery-card">
+      <img src="images/images/FP_1.png">
+      <div class="content">
+        <h3>Sales Performance Dashboard</h3>
+        <p>Revenue, KPIs & store performance</p>
+      </div>
+    </a>
+
+    <!-- CARD 2 -->
+    <a href="retail-analytics-dashboard.html" class="gallery-card">
+      <img src="images/images/furniturepro-dashboard.png">
+      <div class="content">
+        <h3>Retail Analytics Dashboard</h3>
+        <p>Margins, discounts & trends</p>
+      </div>
+    </a>
+
+    <!-- CARD 3 -->
+    <a href="hr-dashboard.html" class="gallery-card">
+      <img src="images/images/FP1.png">
+      <div class="content">
+        <h3>HR Analytics Dashboard</h3>
+        <p>Attrition, hiring & workforce</p>
+      </div>
+    </a>
+
+    <!-- CARD 4 -->
+    <a href="finance-dashboard.html" class="gallery-card">
+      <img src="images/images/FP2.png">
+      <div class="content">
+        <h3>Finance Performance Dashboard</h3>
+        <p>Costs, margins & profitability</p>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+
+</body>
+</html>
