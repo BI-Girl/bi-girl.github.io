@@ -6,11 +6,12 @@
 
   <style>
     /* ===== GLOBAL ===== */
-   body {
+  body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #0d1117;   /* GitHub dark */
+  background-color: #0d1117;
   color: #e6edf3;
+  overflow-x: hidden;   /* 🔒 THIS LINE FIXES THE CANVAS */
 }
 
     /* ===== PROFILE NAV ===== */
@@ -87,7 +88,9 @@
   overflow: hidden;
 }
     .gallery-card {
-  height: 260px;   /* controls card size */
+  height: 260px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
     .card h2 {
