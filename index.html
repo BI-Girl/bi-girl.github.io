@@ -5,6 +5,7 @@
   <title>Muniba Fatima | Power BI Developer</title>
 
   <style>
+    /* ===== GLOBAL ===== */
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
@@ -12,6 +13,38 @@
       color: #24292f;
     }
 
+    /* ===== BANNER ===== */
+    .banner img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .profile-header {
+      text-align: center;
+      margin-top: -70px;
+      margin-bottom: 30px;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      background: #ffffff;
+    }
+
+    .profile-header h1 {
+      margin: 10px 0 5px;
+      font-size: 28px;
+    }
+
+    .profile-header p {
+      color: #57606a;
+      font-size: 16px;
+    }
+
+    /* ===== LAYOUT ===== */
     .container {
       display: grid;
       grid-template-columns: 280px 1fr 300px;
@@ -21,6 +54,7 @@
       padding: 10px 30px 30px;
     }
 
+    /* ===== CARDS ===== */
     .card {
       background: #ffffff;
       border-radius: 10px;
@@ -29,63 +63,36 @@
       margin-bottom: 20px;
     }
 
-    h2 {
+    .card h2 {
       margin-top: 0;
       font-size: 18px;
       border-bottom: 1px solid #eaecef;
       padding-bottom: 8px;
     }
   </style>
-  .banner img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-}
-
-.profile-header {
-  text-align: center;
-  margin-top: -70px;
-  margin-bottom: 30px;
-}
-
-.profile-pic {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 5px solid #ffffff;
-  background: #fff;
-}
-
-.profile-header h1 {
-  margin: 10px 0 5px;
-  font-size: 28px;
-}
-
-.profile-header p {
-  color: #57606a;
-  font-size: 16px;
-}
-
 </head>
 
-<body> 
-  <!-- TOP BANNER -->
+<body>
+
+<!-- ===== TOP BANNER ===== -->
 <div class="banner">
   <img src="images/banner.jpg" alt="Banner">
 </div>
 
+<!-- ===== PROFILE HEADER ===== -->
 <div class="profile-header">
   <img src="images/profile.jpg" alt="Profile" class="profile-pic">
   <h1>Muniba Fatima</h1>
   <p>Power BI Developer | Data Analyst | Microsoft Fabric</p>
 </div>
 
+<!-- ===== MAIN CONTENT ===== -->
 <div class="container">
 
   <!-- LEFT COLUMN -->
   <div>
     <div class="card">
-      <h2>Muniba Fatima</h2>
+      <h2>Bio</h2>
       <p><strong>Power BI Developer</strong></p>
       <p>Data Visualization | DAX | Microsoft Fabric</p>
     </div>
@@ -111,8 +118,11 @@
   <div>
     <div class="card">
       <h2>Pinned Projects</h2>
-      <p>Retail Analytics Dashboard</p>
-      <p>HR / Sales / Finance Dashboards</p>
+      <p><strong>Retail Analytics Dashboard</strong></p>
+      <p>Sales, KPIs, margins and store performance.</p>
+      <br>
+      <p><strong>HR / Sales / Finance Dashboards</strong></p>
+      <p>Business-focused analytical reporting.</p>
     </div>
 
     <div class="card">
@@ -135,8 +145,8 @@
     <div class="card">
       <h2>Power BI Resources</h2>
       <p>DAX Best Practices</p>
-      <p>Power BI Tips</p>
-      <p>Fabric Learning</p>
+      <p>Power BI Tips & Tricks</p>
+      <p>Microsoft Fabric Learning</p>
     </div>
   </div>
 
