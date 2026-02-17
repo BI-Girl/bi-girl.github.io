@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Sales Performance Analysis Dashboard | Muniba Fatima</title>
+<title>Retail Analytics Dashboard | Muniba Fatima</title>
 
 <style>
 /* ===== GLOBAL ===== */
@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== PROFILE HEADER (SAME AS INDEX) ===== */
+/* ===== PROFILE HEADER ===== */
 .profile-top {
   max-width: 1400px;
   margin: 40px auto 30px;
@@ -40,7 +40,6 @@ body {
 .profile-info p {
   margin: 6px 0 0;
   color: #8b949e;
-  font-size: 16px;
 }
 
 .profile-nav {
@@ -52,7 +51,6 @@ body {
   text-decoration: none;
   margin-right: 14px;
   font-size: 15px;
-  transition: color 0.2s ease;
 }
 
 .profile-nav a:hover {
@@ -66,27 +64,56 @@ body {
   padding: 20px 30px 60px;
 }
 
-/* ===== IMAGE CAROUSEL ===== */
-.image-carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  border-radius: 12px;
-  box-shadow: 0 0 0 1px #30363d;
-  margin: 20px 0 30px;
+/* ===== DASHBOARD TITLE ===== */
+.dashboard-title {
+  font-size: 22px;
+  color: #f0f6fc;
+  margin-bottom: 14px;
 }
 
-.image-carousel img {
+/* ===== CAROUSEL ===== */
+.carousel-wrapper {
+  position: relative;
+  background: #161b22;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px #30363d;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
   min-width: 100%;
-  height: auto;
-  scroll-snap-align: start;
   object-fit: cover;
 }
 
-/* Hide scrollbar */
-.image-carousel::-webkit-scrollbar {
-  display: none;
+/* ===== ARROWS ===== */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(13,17,23,0.8);
+  border: 1px solid #30363d;
+  color: #f0f6fc;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.carousel-btn:hover {
+  background: rgba(240,246,252,0.1);
+}
+
+.prev {
+  left: 12px;
+}
+
+.next {
+  right: 12px;
 }
 
 /* ===== CARDS ===== */
@@ -95,7 +122,7 @@ body {
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 0 1px #30363d;
-  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .card h3 {
@@ -113,9 +140,9 @@ body {
 
 <body>
 
-<!-- ===== SAME HEADER AS INDEX ===== -->
+<!-- ===== HEADER ===== -->
 <div class="profile-top">
-  <img src="images/images/profile.jpg" class="profile-pic" alt="Muniba Fatima">
+  <img src="images/images/profile.jpg" class="profile-pic">
 
   <div class="profile-info">
     <h1>Muniba Fatima</h1>
@@ -129,41 +156,53 @@ body {
   </div>
 </div>
 
-<!-- ===== PAGE CONTENT ===== -->
+<!-- ===== CONTENT ===== -->
 <div class="container">
 
-  <!-- IMAGE CAROUSEL -->
-  <div class="image-carousel">
-    <img src="images/images/furniturepro-dashboard.png" alt="First Image">
-    <img src="images/images/FP1.png" alt="Second Image">
-    <img src="images/images/FP2.png" alt="Third Image">
-    <img src="images/images/FP3.png" alt="Fourth Image">
-    <img src="images/images/FP5.png" alt="FIFTH IMAGE">
-    <img src="images/images/FP6.png" alt="FIFTH IMAGE">
+  <!-- DASHBOARD NAME -->
+  <div class="dashboard-title">
+    Retail Analytics Dashboard
   </div>
 
+  <!-- IMAGE CAROUSEL -->
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">◀</button>
+
+    <div class="carousel-track" id="carousel">
+      <img src="images/images/furniturepro-dashboard.png">
+      <img src="images/images/FP1.png">
+      <img src="images/images/FP2.png">
+      <img src="images/images/FP3.png">
+      <img src="images/images/FP5.png">
+      <img src="images/images/FP6.png">
+    </div>
+
+    <button class="carousel-btn next" onclick="moveSlide(1)">▶</button>
+  </div>
+
+  <!-- DETAILS -->
   <div class="card">
     <h3>📌 Business Problem</h3>
     <p>
-      The business required a centralized analytics solution to track sales,
-      margins, store KPIs, and discount impact across regions and time periods.
+      The business required a centralized dashboard to monitor sales,
+      margins, store KPIs, and discount impact across regions.
     </p>
   </div>
 
   <div class="card">
     <h3>📊 Solution</h3>
     <p>
-      Designed and developed an interactive Power BI dashboard using optimized
-      data models, DAX time intelligence, and drill-through capabilities.
+      Developed a Power BI solution with optimized data models,
+      DAX time intelligence, and drill-through analysis.
     </p>
   </div>
 
   <div class="card">
     <h3>🧠 Key Insights</h3>
     <ul>
-      <li>Identified high-performing and underperforming stores</li>
-      <li>Detected margin erosion due to aggressive discounting</li>
-      <li>Enabled faster leadership decisions using real-time KPIs</li>
+      <li>Identified high- and low-performing stores</li>
+      <li>Detected margin erosion due to discounting</li>
+      <li>Improved executive decision-making</li>
     </ul>
   </div>
 
@@ -173,6 +212,22 @@ body {
   </div>
 
 </div>
+
+<script>
+let currentIndex = 0;
+
+function moveSlide(direction) {
+  const track = document.getElementById("carousel");
+  const totalSlides = track.children.length;
+
+  currentIndex += direction;
+
+  if (currentIndex < 0) currentIndex = totalSlides - 1;
+  if (currentIndex >= totalSlides) currentIndex = 0;
+
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+</script>
 
 </body>
 </html>
