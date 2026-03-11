@@ -2,291 +2,599 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Muniba Fatima | Power BI Developer</title>
- 
-  <style>
-    /* ===== GLOBAL ===== */
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muniba Fatima | Senior Analytics Consultant</title>
+<style>
+  /* ===== GLOBAL ===== */
   body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #0d1117;
-  color: #e6edf3;
-  overflow-x: hidden;   /* 🔒 THIS LINE FIXES THE CANVAS */
-}
- 
-    /* ===== PROFILE NAV ===== */
-.profile-nav {
-  margin-top: 14px;
-  font-size: 16px;
-}
- 
-.profile-nav a {
-  color: #ebb559;
-  text-decoration: none;
-  font-size: 15px;
-  transition: color 0.2s ease, transform 0.2s ease;
-  display: inline-block; /* prevents layout shift */
-}
- 
-.profile-nav a:hover {
-  color: #bcfa7a; /* mustard */
-  transform: scale(1.04); /* ~1px visual growth */
-}
- 
-.profile-nav span {
-  color: #fff2f3;
-}
- 
- 
-    /* ===== PROFILE TOP SECTION ===== */
-    .profile-top {
-      max-width: 1400px;
-      margin: 40px auto 20px;
-      padding: 0 30px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
- 
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
- 
-    .profile-info h1 {
-      margin: 0;
-      font-size: 30px;
-    }
- 
-    .profile-info p {
-      margin: 6px 0 0;
-      color: #8b949e;
-      font-size: 16px;
-    }
- 
-    /* ===== LAYOUT ===== */
-    .container {
-      display: grid;
-      grid-template-columns: 280px 1fr 300px;
-      gap: 24px;
-      max-width: 1400px;
-      margin: auto;
-      padding: 10px 30px 40px;
-    }
- 
-    /* ===== CARDS ===== */
-.card {
-  background: #161b22;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 0 1px #30363d;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-   .gallery-card {
-  height: 260px;
-  overflow: hidden;
-}
- 
-    .card h2 {
-  margin-top: 0;
-  font-size: 18px;
-  border-bottom: 1px solid #30363d;
-  padding-bottom: 8px;
-  color: #f0f6fc;
-}
- 
- 
-    /* ===== GALLERY ===== */
-.gallery {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  overflow-y: hidden;
- 
-  width: calc((325px * 2) + 16px); /* EXACTLY 2 images */
-  max-width: 100%;
- 
-  padding-bottom: 10px;
-}
- 
-.gallery img {
-  height: 160px;        /* BIG images */
-  width: 320px;         /* only ~2 fit */
-  object-fit: cover;
-  border-radius: 10px;
-  flex-shrink: 0;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.gallery::-webkit-scrollbar {
-  height: 6px;
-}
- 
-.gallery::-webkit-scrollbar-thumb {
-  background: #30363d;
-}
-    .gallery img:hover {
-  transform: scale(1.03);
-}
- 
-  </style>
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
+    overflow-x: hidden;
+  }
+
+  a { color: #ebb559; text-decoration: none; }
+  a:hover { color: #bcfa7a; }
+
+  /* ===== PROFILE TOP ===== */
+  .profile-top {
+    max-width: 1400px;
+    margin: 40px auto 20px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ebb559;
+    box-shadow: 0 0 16px rgba(235,181,89,0.3);
+    flex-shrink: 0;
+  }
+
+  .profile-info h1 {
+    margin: 0 0 4px;
+    font-size: 30px;
+  }
+
+  .profile-info .title {
+    margin: 0 0 10px;
+    color: #8b949e;
+    font-size: 16px;
+  }
+
+  .profile-nav {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+
+  .profile-nav a {
+    color: #ebb559;
+    transition: color 0.2s;
+  }
+
+  .profile-nav a:hover { color: #bcfa7a; }
+  .profile-nav span { color: #444d56; }
+
+  /* ===== BADGES ===== */
+  .badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .badge {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 12px;
+    color: #ebb559;
+  }
+
+  /* ===== LAYOUT ===== */
+  .container {
+    display: grid;
+    grid-template-columns: 280px 1fr 300px;
+    gap: 24px;
+    max-width: 1400px;
+    margin: auto;
+    padding: 10px 30px 60px;
+  }
+
+  /* ===== CARDS ===== */
+  .card {
+    background: #161b22;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 0 1px #30363d;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .card h2 {
+    margin-top: 0;
+    font-size: 16px;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 8px;
+    color: #f0f6fc;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== SKILLS ===== */
+  .skill-group { margin-bottom: 14px; }
+
+  .skill-group-title {
+    font-size: 12px;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .skill-tag {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 3px 8px;
+    font-size: 12px;
+    color: #c9d1d9;
+  }
+
+  /* ===== EXPERIENCE ===== */
+  .exp-item { margin-bottom: 20px; }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .exp-title {
+    font-weight: 600;
+    font-size: 15px;
+    color: #f0f6fc;
+  }
+
+  .exp-company {
+    color: #ebb559;
+    font-size: 14px;
+  }
+
+  .exp-date {
+    font-size: 12px;
+    color: #8b949e;
+    white-space: nowrap;
+  }
+
+  .exp-bullets {
+    margin: 8px 0 0 16px;
+    padding: 0;
+    font-size: 13px;
+    color: #8b949e;
+    line-height: 1.7;
+  }
+
+  .exp-bullets li { margin-bottom: 4px; }
+
+  /* ===== PROJECTS ===== */
+  .project-card {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+  }
+
+  .project-card:hover { border-color: #ebb559; }
+
+  .project-card h3 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    color: #ebb559;
+  }
+
+  .project-card p {
+    margin: 0;
+    font-size: 13px;
+    color: #8b949e;
+    line-height: 1.5;
+  }
+
+  /* ===== CERTIFICATIONS ===== */
+  .cert-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #21262d;
+    font-size: 13px;
+  }
+
+  .cert-item:last-child { border-bottom: none; }
+
+  .cert-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .cert-name { color: #f0f6fc; font-weight: 500; }
+  .cert-id { color: #8b949e; font-size: 12px; }
+
+  /* ===== GALLERY ===== */
+  .gallery-card { height: 240px; overflow: hidden; }
+
+  .gallery {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+  }
+
+  .gallery img {
+    height: 160px;
+    width: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(235,181,89,0.3);
+  }
+
+  .gallery::-webkit-scrollbar { height: 4px; }
+  .gallery::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+
+  /* ===== CONNECT ===== */
+  .connect-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #21262d;
+    font-size: 14px;
+  }
+
+  .connect-item:last-child { border-bottom: none; }
+
+  .connect-item .icon { font-size: 18px; }
+
+  /* ===== SUMMARY ===== */
+  .summary-text {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ===== INDUSTRY TAGS ===== */
+  .industry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .industry-tag {
+    background: #1c2128;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: #bcfa7a;
+  }
+
+  /* ===== EDUCATION ===== */
+  .edu-item { font-size: 14px; }
+  .edu-degree { font-weight: 600; color: #f0f6fc; }
+  .edu-school { color: #ebb559; margin-top: 2px; }
+  .edu-year { color: #8b949e; font-size: 12px; margin-top: 2px; }
+
+  @media (max-width: 900px) {
+    .container { grid-template-columns: 1fr; }
+    .profile-top { flex-direction: column; text-align: center; }
+  }
+</style>
 </head>
- 
 <body>
- 
+
 <!-- ===== PROFILE HEADER ===== -->
 <div class="profile-top">
-<img src="images/images/profile.jpg" alt="Profile" class="profile-pic">
- 
+  <img src="images/images/profile.jpg" alt="Muniba Fatima" class="profile-pic">
   <div class="profile-info">
-<h1>Muniba Fatima</h1>
-<p>Power BI Developer | Data Analyst | Microsoft Fabric</p>
-<div class="profile-nav">
-<a href="projects.html">Projects</a>
-<span>|</span>
-<a href="resources.html">Resources</a>
-<span>|</span>
-<a href="gallery.html">Gallery</a>
+    <h1>Muniba Fatima</h1>
+    <p class="title">Senior Analytics Consultant &nbsp;|&nbsp; Power BI &nbsp;|&nbsp; Microsoft Fabric &nbsp;|&nbsp; DAX &nbsp;|&nbsp; SQL</p>
+    <div class="badges">
+      <span class="badge">PL-300 Certified</span>
+      <span class="badge">DP-600 Certified</span>
+      <span class="badge">3+ Years Experience</span>
+      <span class="badge">20+ Dashboards Delivered</span>
+    </div>
+    <div class="profile-nav" style="margin-top:12px;">
+      <a href="projects.html">Projects</a>
+      <span>|</span>
+      <a href="gallery.html">Gallery</a>
+      <span>|</span>
+      <a href="mailto:munibaf9@gmail.com">Contact</a>
+    </div>
+  </div>
 </div>
-</div>
-</div>
- 
+
 <!-- ===== MAIN CONTENT ===== -->
 <div class="container">
- 
-  <!-- LEFT COLUMN -->
-<div>
-<div class="card">
-<h2>Bio</h2>
-<p><strong>Hii 👋 I'm Muniba ...</strong></p>
-<p>I specialize in end-to-end dashboard development, from data preparation and SQL querying to clear, insight-driven Power BI visualizations.</p>
-</div>
- 
+
+  <!-- ===== LEFT COLUMN ===== -->
+  <div>
+
+    <!-- BIO -->
     <div class="card">
-<h2>Skills</h2>
-<p>Power BI</p>
-<p>DAX</p>
-<p>Microsoft Fabric</p>
-<p>SQL</p>
-<p>Data Visualization</p>
-</div>
- 
-   <div class="card">
-<h2>Connect</h2>
- 
-  <p>
-    🔗 <a href="https://www.linkedin.com/in/muniba-fatima-364b401bb/"
-          target="_blank"
-          style="text-decoration:none; color:#0969da;">
-      LinkedIn
-</a>
-</p>
- 
-  <p>
-    💻 <a href="https://github.com/BI-Girl"
-          target="_blank"
-          style="text-decoration:none; color:#0969da;">
-      GitHub
-</a>
-</p>
- 
-  <p>
-    ✉️ <a href="mailto:munibaf9@gmail.com"
-          style="text-decoration:none; color:#0969da;">
-      munibaf9@gmail.com
-</a>
-</p>
- 
-  <p>
-    🌐 <a href="https://bi-girl.github.io"
-          target="_blank"
-          style="text-decoration:none; color:#0969da;">
-      Portfolio
-</a>
-</p>
-</div>
- 
+      <h2>About Me</h2>
+      <p class="summary-text">
+        Microsoft-certified Senior Analytics Consultant with 3+ years of experience in Power BI, BI reporting, DAX, SQL, and ETL workflows. Skilled in building interactive dashboards, optimized data models, and automated reporting solutions across Sales, Finance, Inventory, Production, HR, and Marketing.
+      </p>
+      <div class="industry-tags">
+        <span class="industry-tag">Pharma</span>
+        <span class="industry-tag">FMCG</span>
+        <span class="industry-tag">Retail</span>
+        <span class="industry-tag">Jewelry</span>
+        <span class="industry-tag">Manufacturing</span>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="card">
+      <h2>Skills</h2>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Power BI & Fabric</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Power BI Desktop</span>
+          <span class="skill-tag">Power BI Service</span>
+          <span class="skill-tag">DAX</span>
+          <span class="skill-tag">Power Query</span>
+          <span class="skill-tag">Paginated Reports</span>
+          <span class="skill-tag">RLS</span>
+          <span class="skill-tag">Deployment Pipelines</span>
+          <span class="skill-tag">Microsoft Fabric</span>
+          <span class="skill-tag">Lakehouse</span>
+          <span class="skill-tag">Dataflows Gen2</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">SQL</div>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL Queries</span>
+          <span class="skill-tag">Joins</span>
+          <span class="skill-tag">CTEs</span>
+          <span class="skill-tag">Subqueries</span>
+          <span class="skill-tag">Views</span>
+          <span class="skill-tag">TVF / Scalar Functions</span>
+          <span class="skill-tag">ETL Procedures</span>
+          <span class="skill-tag">Query Optimization</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Data Sources</div>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">SAP HANA</span>
+          <span class="skill-tag">Azure SQL</span>
+          <span class="skill-tag">D365 F&O</span>
+          <span class="skill-tag">Business Central</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Excel</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Other</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python (pandas, NumPy)</span>
+          <span class="skill-tag">Power Automate</span>
+          <span class="skill-tag">Excel Advanced</span>
+          <span class="skill-tag">Microsoft D365</span>
+          <span class="skill-tag">Data Modelling</span>
+          <span class="skill-tag">Star Schema</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONNECT -->
+    <div class="card">
+      <h2>Connect</h2>
+      <div class="connect-item">
+        <span class="icon">💼</span>
+        <a href="https://www.linkedin.com/in/muniba-fatima-364b401bb/" target="_blank" style="color:#ebb559;">LinkedIn</a>
+      </div>
+      <div class="connect-item">
+        <span class="icon">💻</span>
+        <a href="https://github.com/BI-Girl" target="_blank" style="color:#ebb559;">GitHub</a>
+      </div>
+      <div class="connect-item">
+        <span class="icon">✉️</span>
+        <a href="mailto:munibaf9@gmail.com" style="color:#ebb559;">munibaf9@gmail.com</a>
+      </div>
+      <div class="connect-item">
+        <span class="icon">📞</span>
+        <span style="color:#8b949e;">8252211387</span>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="card">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div class="edu-degree">M.Sc. in Banking & Financial Analytics</div>
+        <div class="edu-school">Jamia Millia Islamia</div>
+        <div class="edu-year">2021 – 2023</div>
+      </div>
+    </div>
+
   </div>
- 
-  <!-- CENTER COLUMN -->
-<div>
-<div class="card">
-  <h2>Pinned Projects</h2>
 
-  <p>
-    <strong>
-      <a href="furniturepro-co-dashboard.html"
-         style="text-decoration:none; color:#ebb559;">
-        Sales Performance Dashboard
+  <!-- ===== CENTER COLUMN ===== -->
+  <div>
+
+    <!-- EXPERIENCE -->
+    <div class="card">
+      <h2>Experience</h2>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Senior Analytics Consultant</div>
+            <div class="exp-company">Acxiom Consulting Pvt Ltd</div>
+          </div>
+          <div class="exp-date">Apr 2023 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Designed and deployed 20+ Power BI dashboards using DAX, Power Query, SQL across Sales, Finance, Inventory, Production, HR, and Marketing.</li>
+          <li>Built optimized semantic data models (star schema) with advanced DAX, improving performance and reducing refresh time.</li>
+          <li>Created paginated reports (RDL) for financial and audit-critical reporting.</li>
+          <li>Performed complex ETL transformations using Power Query (M) and SQL to clean, validate, and standardize datasets.</li>
+          <li>Integrated data from SQL Server, SAP HANA, Azure SQL, Business Central, D365 F&O, and REST APIs via Python.</li>
+          <li>Prepared SQL views and user-defined functions to support the analytical data layer.</li>
+          <li>Implemented Row-Level Security (RLS) and workspace governance for secure report access.</li>
+          <li>Automated workflows and alerts using Power Automate integrated with Power BI.</li>
+          <li>Managed end-to-end Power BI deployment pipelines (Dev → Test → Prod).</li>
+        </ul>
+      </div>
+
+      <div class="exp-item" style="margin-bottom:0;">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Data Analyst Intern</div>
+            <div class="exp-company">Indian Bank</div>
+          </div>
+          <div class="exp-date">Jan 2023 – Mar 2023</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Created Power BI reports of Customer Account Details, status, and growth patterns of account opening.</li>
+          <li>Transformed and cleaned Variety Card holder details for management reporting.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="card">
+      <h2>Pinned Projects</h2>
+
+      <a href="furniturepro-co-dashboard.html">
+        <div class="project-card">
+          <h3>Sales Performance Dashboard</h3>
+          <p>End-to-end sales analytics with KPIs, margins, and store performance across channels.</p>
+        </div>
       </a>
-    </strong>
-  </p>
-  <p>Sales, KPIs, margins and store performance.</p>
 
-  <br>
-
-  <p>
-    <strong>
-      <a href="Customer-Performance.html"
-         style="text-decoration:none; color:#ebb559;">
-        Customer Analysis Dashboard
+      <a href="Customer-Performance.html">
+        <div class="project-card">
+          <h3>Sales Customer Insights Dashboard</h3>
+          <p>Dynamic KPIs, RFM segmentation, Pareto analysis, and What-If discount simulations.</p>
+        </div>
       </a>
-    </strong>
-  </p>
-  <p>Customer behavior, segmentation and insights.</p>
+
+      <div class="project-card" style="cursor:default;">
+        <h3>D2C Brand Impact Reporting</h3>
+        <p>Multi-channel BI model with automated cost/discount logic, marketing ROI metrics, and executive-level profitability insights.</p>
+      </div>
+
+      <a href="HR.html">
+        <div class="project-card">
+          <h3>HR Analytics Dashboard</h3>
+          <p>Workforce metrics, headcount trends, and HR performance reporting.</p>
+        </div>
+      </a>
+
+      <div style="margin-top:12px;">
+        <a href="projects.html" style="font-size:13px;">View all projects →</a>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="card gallery-card">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <a href="dashboard1.html"><img src="images/images/dashboard1.png" alt="Dashboard 1"></a>
+        <a href="dashboard2.html"><img src="images/images/dashboard2.png" alt="Dashboard 2"></a>
+        <a href="dashboard3.html"><img src="images/images/dashboard3.png" alt="Dashboard 3"></a>
+        <a href="dashboard4.html"><img src="images/images/dashboard4.png" alt="Dashboard 4"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== RIGHT COLUMN ===== -->
+  <div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="card">
+      <h2>Certifications</h2>
+      <div class="cert-item">
+        <span class="cert-icon">🏅</span>
+        <div>
+          <div class="cert-name">Power BI Data Analyst Associate</div>
+          <div class="cert-id">PL-300 · Microsoft</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <span class="cert-icon">🏅</span>
+        <div>
+          <div class="cert-name">Fabric Analytics Engineer Associate</div>
+          <div class="cert-id">DP-600 · Microsoft</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="card">
+      <h2>At a Glance</h2>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; text-align:center;">
+        <div style="background:#0d1117; border:1px solid #30363d; border-radius:8px; padding:14px;">
+          <div style="font-size:26px; font-weight:700; color:#ebb559;">20+</div>
+          <div style="font-size:11px; color:#8b949e; margin-top:4px;">Dashboards<br>Delivered</div>
+        </div>
+        <div style="background:#0d1117; border:1px solid #30363d; border-radius:8px; padding:14px;">
+          <div style="font-size:26px; font-weight:700; color:#ebb559;">3+</div>
+          <div style="font-size:11px; color:#8b949e; margin-top:4px;">Years<br>Experience</div>
+        </div>
+        <div style="background:#0d1117; border:1px solid #30363d; border-radius:8px; padding:14px;">
+          <div style="font-size:26px; font-weight:700; color:#ebb559;">2</div>
+          <div style="font-size:11px; color:#8b949e; margin-top:4px;">Microsoft<br>Certifications</div>
+        </div>
+        <div style="background:#0d1117; border:1px solid #30363d; border-radius:8px; padding:14px;">
+          <div style="font-size:26px; font-weight:700; color:#ebb559;">5+</div>
+          <div style="font-size:11px; color:#8b949e; margin-top:4px;">Industries<br>Served</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="card">
+      <h2>Tools & Platforms</h2>
+      <div class="skill-tags">
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Microsoft Fabric</span>
+        <span class="skill-tag">SQL Server</span>
+        <span class="skill-tag">Azure</span>
+        <span class="skill-tag">SAP HANA</span>
+        <span class="skill-tag">D365 F&O</span>
+        <span class="skill-tag">Business Central</span>
+        <span class="skill-tag">Power Automate</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Excel</span>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
- 
-<div class="card gallery-card">
-<h2>Gallery</h2>
- 
-<div class="gallery">
-
-  <a href="dashboard1.html">
-    <img src="images/images/dashboard1.png" alt="Dashboard 1">
-  </a>
-
-  <a href="dashboard2.html">
-    <img src="images/images/dashboard2.png" alt="Dashboard 2">
-  </a>
-
-  <a href="dashboard3.html">
-    <img src="images/images/dashboard3.png" alt="Dashboard 3">
-  </a>
-
-  <a href="dashboard4.html">
-    <img src="images/images/dashboard4.png" alt="Dashboard 4">
-  </a>
-
-</div>
-</div>
-</div>
- 
-  <!-- RIGHT COLUMN -->
-<!-- RIGHT COLUMN -->
-<div>
- 
-  <!-- Resources should align with Pinned Projects -->
-<div class="card">
-<h2>Power BI Resources</h2>
-<p>DAX Best Practices</p>
-<p>Power BI Tips & Tricks</p>
-<p>SQL Learning</p>
-<p>Microsoft Fabric Learning</p>
-</div>
- 
-  <!-- Gallery should align with Connect -->
- 
- 
-</div>
- 
- 
-</div>
- 
 </body>
 </html>
