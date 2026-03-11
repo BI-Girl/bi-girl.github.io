@@ -94,13 +94,6 @@ nav.scrolled {
   gap: 8px;
 }
 
-.nav-logo::before {
-  content: '';
-  width: 8px; height: 8px;
-  background: var(--gold);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--gold);
-}
 
 .nav-links {
   display: flex;
@@ -228,33 +221,6 @@ nav.scrolled {
   mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
 }
 
-/* Floating shapes in hero */
-.hero-floats {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.hero-float {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(232,184,75,0.12), transparent 70%);
-  animation: floatUp linear infinite;
-}
-
-.hero-float:nth-child(1) { width:180px; height:180px; left:5%; bottom:-200px; animation-duration:14s; animation-delay:0s; }
-.hero-float:nth-child(2) { width:100px; height:100px; left:25%; bottom:-150px; animation-duration:11s; animation-delay:3s; }
-.hero-float:nth-child(3) { width:60px; height:60px; left:50%; bottom:-100px; animation-duration:9s; animation-delay:1.5s; }
-.hero-float:nth-child(4) { width:140px; height:140px; right:15%; bottom:-200px; animation-duration:12s; animation-delay:5s; }
-.hero-float:nth-child(5) { width:80px; height:80px; right:5%; bottom:-120px; animation-duration:10s; animation-delay:2s; }
-
-@keyframes floatUp {
-  0% { transform: translateY(0) scale(1); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 0.3; }
-  100% { transform: translateY(-110vh) scale(0.6); opacity: 0; }
-}
 
 .hero-inner {
   position: relative;
@@ -289,13 +255,6 @@ nav.scrolled {
   width: 6px; height: 6px;
   background: var(--gold);
   border-radius: 50%;
-  box-shadow: 0 0 6px var(--gold);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.4); }
 }
 
 .hero-text h1 {
@@ -309,7 +268,6 @@ nav.scrolled {
 
 .hero-text h1 span {
   color: var(--gold);
-  text-shadow: 0 0 40px rgba(232,184,75,0.25);
 }
 
 .hero-subtitle {
@@ -317,20 +275,6 @@ nav.scrolled {
   color: var(--muted2);
   margin-bottom: 6px;
   font-weight: 400;
-  min-height: 28px;
-}
-
-.hero-typing {
-  color: var(--gold);
-  font-weight: 600;
-  border-right: 2px solid var(--gold);
-  padding-right: 3px;
-  animation: blink 0.8s step-end infinite;
-}
-
-@keyframes blink {
-  0%, 100% { border-color: var(--gold); }
-  50% { border-color: transparent; }
 }
 
 .hero-summary {
@@ -405,7 +349,6 @@ nav.scrolled {
   font-weight: 900;
   color: var(--gold);
   line-height: 1;
-  text-shadow: 0 0 20px rgba(232,184,75,0.2);
   letter-spacing: -1px;
 }
 
@@ -427,14 +370,10 @@ nav.scrolled {
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  padding: 4px;
-  background: conic-gradient(var(--gold), rgba(232,184,75,0.1), var(--gold), rgba(232,184,75,0.1), var(--gold));
-  animation: spin 10s linear infinite;
+  padding: 3px;
+  background: var(--gold);
   position: relative;
-  filter: drop-shadow(0 0 30px rgba(232,184,75,0.2));
 }
-
-@keyframes spin { to { transform: rotate(360deg); } }
 
 .hero-img-inner {
   width: 100%;
@@ -442,7 +381,6 @@ nav.scrolled {
   border-radius: 50%;
   background: var(--bg2);
   overflow: hidden;
-  animation: spin 10s linear infinite reverse;
 }
 
 .hero-img-inner img {
@@ -1151,20 +1089,11 @@ footer {
 <section id="hero" style="padding-top:80px; padding-bottom:60px;">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-floats">
-    <div class="hero-float"></div>
-    <div class="hero-float"></div>
-    <div class="hero-float"></div>
-    <div class="hero-float"></div>
-    <div class="hero-float"></div>
-  </div>
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-tag">Available for Opportunities</div>
       <h1>Muniba<br><span>Fatima</span></h1>
-      <p class="hero-subtitle">
-        Senior Analytics Consultant &nbsp;·&nbsp; <span class="hero-typing" id="typing-text"></span>
-      </p>
+      <p class="hero-subtitle">Senior Analytics Consultant &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; Microsoft Fabric</p>
       <p class="hero-summary">
         Microsoft-certified analyst with 3+ years turning raw data into executive-ready dashboards. Specializing in Power BI, DAX, SQL, and enterprise ETL across Finance, Sales, Inventory & more.
       </p>
@@ -1174,19 +1103,19 @@ footer {
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
-          <div class="hero-stat-num" data-target="20" data-suffix="+">0+</div>
+          <div class="hero-stat-num">20+</div>
           <div class="hero-stat-label">Dashboards Delivered</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num" data-target="3" data-suffix="+">0+</div>
+          <div class="hero-stat-num">3+</div>
           <div class="hero-stat-label">Years Experience</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num" data-target="5" data-suffix="+">0+</div>
+          <div class="hero-stat-num">5+</div>
           <div class="hero-stat-label">Industries Served</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num" data-target="2" data-suffix="">0</div>
+          <div class="hero-stat-num">2</div>
           <div class="hero-stat-label">MS Certifications</div>
         </div>
       </div>
@@ -1629,57 +1558,6 @@ footer {
     document.getElementById('mobile-menu').classList.remove('open');
     document.getElementById('hamburger').classList.remove('open');
   }
-
-  /* ===== TYPING ANIMATION ===== */
-  const phrases = ['Power BI Expert', 'Microsoft Fabric', 'DAX Specialist', 'SQL Analyst', 'Data Storyteller'];
-  let phraseIdx = 0, charIdx = 0, deleting = false;
-  const typingEl = document.getElementById('typing-text');
-
-  function type() {
-    const phrase = phrases[phraseIdx];
-    if (!deleting) {
-      typingEl.textContent = phrase.substring(0, charIdx + 1);
-      charIdx++;
-      if (charIdx === phrase.length) {
-        deleting = true;
-        setTimeout(type, 1800);
-        return;
-      }
-    } else {
-      typingEl.textContent = phrase.substring(0, charIdx - 1);
-      charIdx--;
-      if (charIdx === 0) {
-        deleting = false;
-        phraseIdx = (phraseIdx + 1) % phrases.length;
-      }
-    }
-    setTimeout(type, deleting ? 60 : 90);
-  }
-  type();
-
-  /* ===== ANIMATED COUNTERS ===== */
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.target);
-    const suffix = el.dataset.suffix || '';
-    let current = 0;
-    const step = Math.ceil(target / 30);
-    const timer = setInterval(() => {
-      current = Math.min(current + step, target);
-      el.textContent = current + suffix;
-      if (current >= target) clearInterval(timer);
-    }, 50);
-  }
-
-  const statsObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        statsObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.hero-stat-num[data-target]').forEach(el => statsObserver.observe(el));
 
   /* ===== FORM HANDLER ===== */
   function handleForm(e) {
